@@ -10,10 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     var playerInput = 0
-    var randImput = 0
+    var randInput = 0
     var playerWinsv = 0
     var randWins = 0
-
+    func detirmineWinner() {
+        var randInput = arc4random_uniform(3)
+        print(randInput)
+        if playerInput == randInput{
+            
+        }
+    }
+    @IBAction func btnPpr(_ sender: Any) {
+        playerInput = 0
+        detirmineWinner()
+    }
+    @IBOutlet weak var lblMain: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

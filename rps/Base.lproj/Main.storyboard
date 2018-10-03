@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,30 +15,33 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="welcome to my stupid RPS sim!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-sp-hcD">
-                                <rect key="frame" x="52" y="50" width="730" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="welcome to my RPS sim!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-sp-hcD">
+                                <rect key="frame" x="52" y="50" width="271" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWi-Ft-8uX">
-                                <rect key="frame" x="173" y="121" width="30" height="30"/>
+                                <rect key="frame" x="173.5" y="121" width="30" height="30"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZi-NP-2Ei">
-                                <rect key="frame" x="73" y="116" width="30" height="40"/>
+                                <rect key="frame" x="73.5" y="116" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="✋"/>
+                                <connections>
+                                    <action selector="btnPpr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gr0-b7-LLY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-an-BHc">
-                                <rect key="frame" x="172" y="116" width="30" height="40"/>
+                                <rect key="frame" x="172.5" y="116" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="✌️"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUA-yy-kqF">
-                                <rect key="frame" x="272" y="116" width="30" height="40"/>
+                                <rect key="frame" x="272.5" y="116" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="👊"/>
                             </button>
@@ -46,19 +49,25 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="1QB-2y-nhB"/>
-                            <constraint firstItem="SZi-NP-2Ei" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="5uR-iz-ZJO"/>
                             <constraint firstItem="SZi-NP-2Ei" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="ADg-hy-oke"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eco-sp-hcD" secondAttribute="trailing" constant="52" id="Koi-de-43m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NUA-yy-kqF" secondAttribute="trailing" constant="73" id="QOd-UH-mU4"/>
+                            <constraint firstItem="Eco-sp-hcD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MJe-b8-KEo"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="RQG-3N-wvG"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="WCG-hg-FwY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="ZEf-BT-mDK"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="HWi-Ft-8uX" secondAttribute="trailing" constant="69" id="fWe-VO-wz9"/>
+                            <constraint firstItem="7Q7-an-BHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lyP-Zv-htS"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="7Q7-an-BHc" secondAttribute="trailing" constant="70" id="uEY-pi-KnI"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="vIK-vN-Ctq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnPpr" destination="SZi-NP-2Ei" id="Ixs-HP-fHP"/>
+                        <outlet property="btnRck" destination="NUA-yy-kqF" id="yhE-HG-HFt"/>
+                        <outlet property="btnScs" destination="7Q7-an-BHc" id="mhU-dL-mEK"/>
+                        <outlet property="lblMain" destination="Eco-sp-hcD" id="dGy-0B-P5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
