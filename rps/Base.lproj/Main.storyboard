@@ -18,36 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="welcome to my RPS sim!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-sp-hcD">
-                                <rect key="frame" x="52" y="50" width="271" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcome to my RPS sim!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eco-sp-hcD">
+                                <rect key="frame" x="52" y="65" width="271" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWi-Ft-8uX">
-                                <rect key="frame" x="173.5" y="121" width="30" height="30"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZi-NP-2Ei">
-                                <rect key="frame" x="73.5" y="116" width="30" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZi-NP-2Ei">
+                                <rect key="frame" x="73.5" y="131" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="✋"/>
                                 <connections>
                                     <action selector="btnPpr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gr0-b7-LLY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-an-BHc">
-                                <rect key="frame" x="172.5" y="116" width="30" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Q7-an-BHc">
+                                <rect key="frame" x="172.5" y="131" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="✌️"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUA-yy-kqF">
-                                <rect key="frame" x="272.5" y="116" width="30" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUA-yy-kqF">
+                                <rect key="frame" x="272.5" y="131" width="30" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="👊"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Eco-sp-hcD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="0A1-T4-2aL"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="1QB-2y-nhB"/>
                             <constraint firstItem="SZi-NP-2Ei" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="ADg-hy-oke"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eco-sp-hcD" secondAttribute="trailing" constant="52" id="Koi-de-43m"/>
@@ -55,7 +53,6 @@
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="RQG-3N-wvG"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="WCG-hg-FwY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="ZEf-BT-mDK"/>
-                            <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="HWi-Ft-8uX" secondAttribute="trailing" constant="69" id="fWe-VO-wz9"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lyP-Zv-htS"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="7Q7-an-BHc" secondAttribute="trailing" constant="70" id="uEY-pi-KnI"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="vIK-vN-Ctq"/>
@@ -63,9 +60,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnPpr" destination="SZi-NP-2Ei" id="Ixs-HP-fHP"/>
-                        <outlet property="btnRck" destination="NUA-yy-kqF" id="yhE-HG-HFt"/>
-                        <outlet property="btnScs" destination="7Q7-an-BHc" id="mhU-dL-mEK"/>
+                        <outlet property="btnPpr" destination="SZi-NP-2Ei" id="YkA-jF-uvk"/>
                         <outlet property="lblMain" destination="Eco-sp-hcD" id="dGy-0B-P5X"/>
                     </connections>
                 </viewController>
