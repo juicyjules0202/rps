@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  rps
-//
+//andy this is actually my file son deal with it
 //  Created by student on 28/9/2018.
 //  Copyright © 2018 student. All rights reserved.
 //
@@ -23,7 +23,10 @@ class ViewController: UIViewController {
         if playerInput == randInput{
             print("it's a draw.")
         } else {
-            print("To be continued *bum bum bum bum bumbadum*")
+            if playerInput != randInput + 1 && randInput != playerInput + 1{
+                //do +3 to the smaller thing
+            }
+            //start doing stuffs about which one is larger
         }
     }
     @IBAction func btnPpr(_ sender: Any) {
