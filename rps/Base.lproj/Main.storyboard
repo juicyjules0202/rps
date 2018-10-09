@@ -48,17 +48,33 @@
                                     <action selector="btnRck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDz-b0-i1g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the bot chose:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPL-ge-6BC">
+                                <rect key="frame" x="122.5" y="211" width="130" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=";-; press a button already" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqm-Jx-ZJc">
+                                <rect key="frame" x="91.5" y="262" width="192" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="0A1-T4-2aL"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="1QB-2y-nhB"/>
+                            <constraint firstItem="SPL-ge-6BC" firstAttribute="top" secondItem="7Q7-an-BHc" secondAttribute="bottom" constant="40" id="61l-M4-tLM"/>
+                            <constraint firstItem="tqm-Jx-ZJc" firstAttribute="top" secondItem="SPL-ge-6BC" secondAttribute="bottom" constant="25" id="6T9-Dd-Hqd"/>
                             <constraint firstItem="SZi-NP-2Ei" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="ADg-hy-oke"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eco-sp-hcD" secondAttribute="trailing" constant="52" id="Koi-de-43m"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MJe-b8-KEo"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="RQG-3N-wvG"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="WCG-hg-FwY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="ZEf-BT-mDK"/>
+                            <constraint firstItem="tqm-Jx-ZJc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvL-aO-RAP"/>
+                            <constraint firstItem="SPL-ge-6BC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jJL-Hx-aGY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lyP-Zv-htS"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="7Q7-an-BHc" secondAttribute="trailing" constant="70" id="uEY-pi-KnI"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="vIK-vN-Ctq"/>
@@ -70,6 +86,7 @@
                         <outlet property="btnRck" destination="NUA-yy-kqF" id="W20-ko-yTU"/>
                         <outlet property="btnScs" destination="7Q7-an-BHc" id="YEZ-cQ-zvj"/>
                         <outlet property="lblMain" destination="Eco-sp-hcD" id="dGy-0B-P5X"/>
+                        <outlet property="whatTheBotChose" destination="tqm-Jx-ZJc" id="G3C-Ps-kKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -20,8 +20,16 @@ class ViewController: UIViewController {
     func detirmineWinner() {
         randInput = Int(arc4random_uniform(3))
         print(randInput)
+        if randInput == 0{
+            whatTheBotChose.text = ("✋")
+        } else if randInput == 1{
+            whatTheBotChose.text = ("✌️")
+        } else {
+            whatTheBotChose.text = ("👊")
+        }
         if playerInput == randInput{
             print("it's a draw.")
+            lblMain.text = ("you draw a drew")
         } else {
             if playerInput == 0 &&  randInput == 2{
                 playerInput += 3
@@ -31,9 +39,11 @@ class ViewController: UIViewController {
             if randInput > playerInput{
                 print("ur a srs nub brb u succ beeg nuts oooooofffffff")
                 print("this actually means you lose lmao")
+                lblMain.text = ("S U F F E R L O S S")
             } else {
                 print("bitconnEEEEEEEEEEEEEct")
                 print("you win this logic actually works")
+                lblMain.text = ("u actually win wow")
             }
         }
     }
@@ -52,6 +62,7 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var lblMain: UILabel!
+    @IBOutlet weak var whatTheBotChose: UILabel!
     
     
     
