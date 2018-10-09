@@ -23,10 +23,18 @@ class ViewController: UIViewController {
         if playerInput == randInput{
             print("it's a draw.")
         } else {
-            if playerInput != randInput + 1 && randInput != playerInput + 1{
-                //do +3 to the smaller thing
+            if playerInput == 0 &&  randInput == 2{
+                playerInput += 3
+            } else if randInput == 0 &&  playerInput == 2{
+                randInput += 3
             }
-            //start doing stuffs about which one is larger
+            if randInput > playerInput{
+                print("ur a srs nub brb u succ beeg nuts oooooofffffff")
+                print("this actually means you lose lmao")
+            } else {
+                print("bitconnEEEEEEEEEEEEEct")
+                print("you win this logic actually works")
+            }
         }
     }
     @IBAction func btnPpr(_ sender: Any) {
