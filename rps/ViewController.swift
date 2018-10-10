@@ -13,7 +13,9 @@ class ViewController: UIViewController {
     var randInput = 0
     var playerWins = 0
     var randWins = 0
+    var numberOfWinsToVictory = 2
     
+    @IBOutlet weak var btnResetter: UIButton!
     @IBOutlet weak var btnPpr: UIButton!
     @IBOutlet weak var btnScs: UIButton!
     @IBOutlet weak var btnRck: UIButton!
@@ -40,13 +42,16 @@ class ViewController: UIViewController {
                 print("ur a srs nub brb u succ beeg nuts oooooofffffff")
                 print("this actually means you lose lmao")
                 lblMain.text = ("S U F F E R L O S S")
+                randWins += 1
             } else {
                 print("bitconnEEEEEEEEEEEEEct")
                 print("you win this logic actually works")
                 lblMain.text = ("u actually win wow")
+                playerWins += 1
             }
         }
     }
+  
     @IBAction func btnPpr(_ sender: Any) {
         print("enter")
         playerInput = 0
@@ -63,6 +68,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lblMain: UILabel!
     @IBOutlet weak var whatTheBotChose: UILabel!
+    @IBOutlet weak var lblgamestillwin: UILabel!
     
     
     
@@ -70,7 +76,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
