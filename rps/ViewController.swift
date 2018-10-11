@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var randInput = 0
     var playerWins = 0
     var randWins = 0
-    var numberOfWinsToVictory = 2
+    var numberOfWinsToVictory = 3
     
     @IBOutlet weak var btnResetter: UIButton!
     @IBOutlet weak var btnPpr: UIButton!
@@ -50,6 +50,14 @@ class ViewController: UIViewController {
                 playerWins += 1
             }
         }
+        lblScoreboard.text = "\(playerWins):\(randWins)"
+        if playerWins == numberOfWinsToVictory {
+            lblMain.text = "you win the bot!"
+            lblMain.textColor = UIColor.blue
+        } else if randWins == numberOfWinsToVictory{
+            lblMain.text = "you lose the bot wait wut"
+            lblMain.textColor = UIColor.red
+        }
     }
   
     @IBAction func btnPpr(_ sender: Any) {
@@ -65,10 +73,20 @@ class ViewController: UIViewController {
         playerInput = 2
         detirmineWinner()
     }
+    @IBAction func resetGame(_ sender: Any) {
+        playerInput = 0
+        randInput = 0
+        playerWins = 0
+        randWins = 0
+        lblMain.text = "T R A N C E N D"
+        lblMain.textColor = UIColor.black
+    }
     
+    @IBOutlet weak var lblScoreboard: UILabel!
     @IBOutlet weak var lblMain: UILabel!
     @IBOutlet weak var whatTheBotChose: UILabel!
     @IBOutlet weak var lblgamestillwin: UILabel!
+    
     
     
     

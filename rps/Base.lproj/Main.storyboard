@@ -60,7 +60,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3 games for the win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7i-F7-jpS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 games for the win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7i-F7-jpS">
                                 <rect key="frame" x="109" y="313" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -69,7 +69,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tl3-qy-qOe">
                                 <rect key="frame" x="287" y="595" width="46" height="30"/>
                                 <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g5i-h3-trV"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etv-l2-LGs">
+                                <rect key="frame" x="172" y="364" width="31" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -79,6 +88,7 @@
                             <constraint firstItem="tqm-Jx-ZJc" firstAttribute="top" secondItem="SPL-ge-6BC" secondAttribute="bottom" constant="25" id="6T9-Dd-Hqd"/>
                             <constraint firstItem="SZi-NP-2Ei" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="ADg-hy-oke"/>
                             <constraint firstItem="G7i-F7-jpS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FJE-pz-wln"/>
+                            <constraint firstItem="Etv-l2-LGs" firstAttribute="top" secondItem="G7i-F7-jpS" secondAttribute="bottom" constant="30" id="Jsk-Va-g5x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eco-sp-hcD" secondAttribute="trailing" constant="52" id="Koi-de-43m"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MJe-b8-KEo"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="RQG-3N-wvG"/>
@@ -86,11 +96,13 @@
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="WCG-hg-FwY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="ZEf-BT-mDK"/>
                             <constraint firstItem="tqm-Jx-ZJc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvL-aO-RAP"/>
+                            <constraint firstItem="Etv-l2-LGs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ffk-Yv-NnK"/>
                             <constraint firstItem="SPL-ge-6BC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jJL-Hx-aGY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lyP-Zv-htS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tl3-qy-qOe" secondAttribute="trailing" constant="42" id="meo-c3-02x"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="7Q7-an-BHc" secondAttribute="trailing" constant="70" id="uEY-pi-KnI"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="vIK-vN-Ctq"/>
+                            <constraint firstItem="G7i-F7-jpS" firstAttribute="top" secondItem="tqm-Jx-ZJc" secondAttribute="bottom" constant="30" id="zib-bp-5jU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -100,6 +112,7 @@
                         <outlet property="btnResetter" destination="tl3-qy-qOe" id="hh6-Zv-qb2"/>
                         <outlet property="btnScs" destination="7Q7-an-BHc" id="YEZ-cQ-zvj"/>
                         <outlet property="lblMain" destination="Eco-sp-hcD" id="dGy-0B-P5X"/>
+                        <outlet property="lblScoreboard" destination="Etv-l2-LGs" id="dkw-gq-FmC"/>
                         <outlet property="lblgamestillwin" destination="G7i-F7-jpS" id="IFQ-pb-caP"/>
                         <outlet property="whatTheBotChose" destination="tqm-Jx-ZJc" id="G3C-Ps-kKo"/>
                     </connections>
