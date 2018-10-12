@@ -14,49 +14,67 @@ class ViewController: UIViewController {
     var playerWins = 0
     var randWins = 0
     var numberOfWinsToVictory = 3
+    var thotOMmeter = 0
     
     @IBOutlet weak var btnResetter: UIButton!
     @IBOutlet weak var btnPpr: UIButton!
     @IBOutlet weak var btnScs: UIButton!
     @IBOutlet weak var btnRck: UIButton!
     func detirmineWinner() {
-        randInput = Int(arc4random_uniform(3))
-        print(randInput)
-        if randInput == 0{
-            whatTheBotChose.text = ("✋")
-        } else if randInput == 1{
-            whatTheBotChose.text = ("✌️")
-        } else {
-            whatTheBotChose.text = ("👊")
-        }
-        if playerInput == randInput{
-            print("it's a draw.")
-            lblMain.text = ("you draw a drew")
-        } else {
-            if playerInput == 0 &&  randInput == 2{
-                playerInput += 3
-            } else if randInput == 0 &&  playerInput == 2{
-                randInput += 3
-            }
-            if randInput > playerInput{
-                print("ur a srs nub brb u succ beeg nuts oooooofffffff")
-                print("this actually means you lose lmao")
-                lblMain.text = ("S U F F E R L O S S")
-                randWins += 1
+        if playerWins != numberOfWinsToVictory && randWins != numberOfWinsToVictory{
+            randInput = Int(arc4random_uniform(3))
+            print(randInput)
+            if randInput == 0{
+                whatTheBotChose.text = ("✋")
+            } else if randInput == 1{
+                whatTheBotChose.text = ("✌️")
             } else {
-                print("bitconnEEEEEEEEEEEEEct")
-                print("you win this logic actually works")
-                lblMain.text = ("u actually win wow")
-                playerWins += 1
+                whatTheBotChose.text = ("👊")
             }
-        }
-        lblScoreboard.text = "\(playerWins):\(randWins)"
-        if playerWins == numberOfWinsToVictory {
-            lblMain.text = "you win the bot!"
-            lblMain.textColor = UIColor.blue
-        } else if randWins == numberOfWinsToVictory{
-            lblMain.text = "you lose the bot wait wut"
-            lblMain.textColor = UIColor.red
+            if playerInput == randInput{
+                print("it's a draw.")
+                lblMain.text = ("you draw a drew")
+            } else {
+                if playerInput == 0 &&  randInput == 2{
+                    playerInput += 3
+                } else if randInput == 0 &&  playerInput == 2{
+                    randInput += 3
+                }
+                if randInput > playerInput{
+                    print("ur a srs nub brb u succ beeg nuts oooooofffffff")
+                    print("this actually means you lose lmao")
+                    lblMain.text = ("S U F F E R L O S S")
+                    randWins += 1
+                } else {
+                    print("bitconnEEEEEEEEEEEEEct")
+                    print("you win this logic actually works")
+                    lblMain.text = ("u actually win wow")
+                    playerWins += 1
+                }
+            }
+            lblScoreboard.text = "\(playerWins):\(randWins)"
+            if playerWins == numberOfWinsToVictory {
+                lblMain.text = "you win the bot!"
+                lblMain.textColor = UIColor.blue
+            } else if randWins == numberOfWinsToVictory{
+                lblMain.text = "you lose the bot wait wut"
+                lblMain.textColor = UIColor.red
+            }
+        }else{
+            thotOMmeter += 1
+            if thotOMmeter == 1{
+                lblMain.text = "RESET ALREADY"
+            } else if thotOMmeter == 2{
+                lblMain.text = "STAHP CLICKING"
+            } else if thotOMmeter == 3{
+                lblMain.text = "you thot"
+            } else if thotOMmeter == 4{
+                lblMain.text = "THOT"
+            } else if thotOMmeter == 5{
+                lblMain.text = "T H O T"
+            } else {
+                lblMain.text = "THOOOOOOOOOOT"
+            }
         }
     }
   
@@ -80,6 +98,7 @@ class ViewController: UIViewController {
         randWins = 0
         lblMain.text = "T R A N C E N D"
         lblMain.textColor = UIColor.black
+        lblScoreboard.text = "0:0"
     }
     
     @IBOutlet weak var lblScoreboard: UILabel!
