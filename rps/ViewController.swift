@@ -96,6 +96,7 @@ class ViewController: UIViewController {
         randInput = 0
         playerWins = 0
         randWins = 0
+        thotOMmeter = 0
         lblMain.text = "T R A N C E N D"
         lblMain.textColor = UIColor.black
         lblScoreboard.text = "0:0"
