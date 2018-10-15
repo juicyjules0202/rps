@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//setup var
 class ViewController: UIViewController {
     var playerInput = 0
     var randInput = 0
@@ -15,12 +15,20 @@ class ViewController: UIViewController {
     var randWins = 0
     var numberOfWinsToVictory = 3
     var thotOMmeter = 0
-    
+    var inSettingsMenu = false
+    //all the buttons
+    @IBOutlet weak var btnPlusGTW: UIButton!
+    @IBOutlet weak var btnMinusGTW: UIButton!
+    @IBOutlet weak var btnSettings: UIButton!
     @IBOutlet weak var btnResetter: UIButton!
     @IBOutlet weak var btnPpr: UIButton!
     @IBOutlet weak var btnScs: UIButton!
     @IBOutlet weak var btnRck: UIButton!
+    //layout setup
+    
+    //main function
     func detirmineWinner() {
+    if inSettingsMenu == false{
         if playerWins != numberOfWinsToVictory && randWins != numberOfWinsToVictory{
             randInput = Int(arc4random_uniform(3))
             print(randInput)
@@ -72,12 +80,26 @@ class ViewController: UIViewController {
                 lblMain.text = "THOT"
             } else if thotOMmeter == 5{
                 lblMain.text = "T H O T"
+            } else if thotOMmeter == 9{
+                lblMain.text = "I will reset 4 u then"
+            } else if thotOMmeter == 10{
+                playerInput = 0
+                randInput = 0
+                playerWins = 0
+                randWins = 0
+                thotOMmeter = 0
+                lblMain.text = "dun waste my time thot"
+                lblMain.textColor = UIColor.black
+                lblScoreboard.text = "0:0"
             } else {
-                lblMain.text = "THOOOOOOOOOOT"
+                lblMain.text = "THOOOOOOOOOOOOT"
             }
         }
+    } else {
+        
+        }
     }
-  
+  //button functions
     @IBAction func btnPpr(_ sender: Any) {
         print("enter")
         playerInput = 0
@@ -101,7 +123,19 @@ class ViewController: UIViewController {
         lblMain.textColor = UIColor.black
         lblScoreboard.text = "0:0"
     }
+   
     
+    @IBAction func settingsMenu(_ sender: Any) {
+        if inSettingsMenu == false{
+            inSettingsMenu = true
+            btnPlusGTW.isHidden = false
+            btnMinusGTW.isHidden = false
+        } else {
+            inSettingsMenu = false
+            btnPlusGTW.isHidden = true
+            btnMinusGTW.isHidden = true
+        }
+    }
     @IBOutlet weak var lblScoreboard: UILabel!
     @IBOutlet weak var lblMain: UILabel!
     @IBOutlet weak var whatTheBotChose: UILabel!
@@ -114,6 +148,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnPlusGTW.isHidden = true
+        btnMinusGTW.isHidden = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

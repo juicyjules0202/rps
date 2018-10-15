@@ -79,6 +79,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXR-k6-9DU">
+                                <rect key="frame" x="296" y="305" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCa-cZ-q6h">
+                                <rect key="frame" x="49" y="305" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="-"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEe-tn-2dn">
+                                <rect key="frame" x="42" y="595" width="48" height="30"/>
+                                <state key="normal" title="PAUSE"/>
+                                <connections>
+                                    <action selector="settingsMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcH-FW-qaR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -88,18 +105,24 @@
                             <constraint firstItem="tqm-Jx-ZJc" firstAttribute="top" secondItem="SPL-ge-6BC" secondAttribute="bottom" constant="25" id="6T9-Dd-Hqd"/>
                             <constraint firstItem="SZi-NP-2Ei" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="ADg-hy-oke"/>
                             <constraint firstItem="G7i-F7-jpS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FJE-pz-wln"/>
+                            <constraint firstItem="uCa-cZ-q6h" firstAttribute="top" secondItem="SZi-NP-2Ei" secondAttribute="bottom" constant="134" id="Iy0-ML-eK5"/>
                             <constraint firstItem="Etv-l2-LGs" firstAttribute="top" secondItem="G7i-F7-jpS" secondAttribute="bottom" constant="30" id="Jsk-Va-g5x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eco-sp-hcD" secondAttribute="trailing" constant="52" id="Koi-de-43m"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MJe-b8-KEo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vEe-tn-2dn" secondAttribute="bottom" constant="42" id="P8p-ln-d9c"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="RQG-3N-wvG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tl3-qy-qOe" secondAttribute="bottom" constant="42" id="Syg-cd-beN"/>
                             <constraint firstItem="Eco-sp-hcD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="WCG-hg-FwY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="leading" secondItem="SZi-NP-2Ei" secondAttribute="trailing" constant="69" id="ZEf-BT-mDK"/>
                             <constraint firstItem="tqm-Jx-ZJc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZvL-aO-RAP"/>
                             <constraint firstItem="Etv-l2-LGs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ffk-Yv-NnK"/>
+                            <constraint firstItem="iXR-k6-9DU" firstAttribute="leading" secondItem="G7i-F7-jpS" secondAttribute="trailing" constant="30" id="itA-V9-xpl"/>
                             <constraint firstItem="SPL-ge-6BC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jJL-Hx-aGY"/>
                             <constraint firstItem="7Q7-an-BHc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lyP-Zv-htS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tl3-qy-qOe" secondAttribute="trailing" constant="42" id="meo-c3-02x"/>
+                            <constraint firstItem="iXR-k6-9DU" firstAttribute="top" secondItem="NUA-yy-kqF" secondAttribute="bottom" constant="134" id="mzI-pG-zRo"/>
+                            <constraint firstItem="vEe-tn-2dn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="p6E-Hj-T1x"/>
+                            <constraint firstItem="G7i-F7-jpS" firstAttribute="leading" secondItem="uCa-cZ-q6h" secondAttribute="trailing" constant="30" id="sFi-WY-A72"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="leading" secondItem="7Q7-an-BHc" secondAttribute="trailing" constant="70" id="uEY-pi-KnI"/>
                             <constraint firstItem="NUA-yy-kqF" firstAttribute="top" secondItem="Eco-sp-hcD" secondAttribute="bottom" constant="42" id="vIK-vN-Ctq"/>
                             <constraint firstItem="G7i-F7-jpS" firstAttribute="top" secondItem="tqm-Jx-ZJc" secondAttribute="bottom" constant="30" id="zib-bp-5jU"/>
@@ -107,10 +130,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="btnMinusGTW" destination="uCa-cZ-q6h" id="ylu-UQ-T6T"/>
+                        <outlet property="btnPlusGTW" destination="iXR-k6-9DU" id="ITc-ET-cvw"/>
                         <outlet property="btnPpr" destination="SZi-NP-2Ei" id="YkA-jF-uvk"/>
                         <outlet property="btnRck" destination="NUA-yy-kqF" id="W20-ko-yTU"/>
                         <outlet property="btnResetter" destination="tl3-qy-qOe" id="hh6-Zv-qb2"/>
                         <outlet property="btnScs" destination="7Q7-an-BHc" id="YEZ-cQ-zvj"/>
+                        <outlet property="btnSettings" destination="vEe-tn-2dn" id="jFP-Ml-P2l"/>
                         <outlet property="lblMain" destination="Eco-sp-hcD" id="dGy-0B-P5X"/>
                         <outlet property="lblScoreboard" destination="Etv-l2-LGs" id="dkw-gq-FmC"/>
                         <outlet property="lblgamestillwin" destination="G7i-F7-jpS" id="IFQ-pb-caP"/>
