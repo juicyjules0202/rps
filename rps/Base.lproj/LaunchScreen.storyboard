@@ -18,20 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x0K-bw-dpY">
-                                <rect key="frame" x="112" y="342.5" width="150" height="2"/>
-                            </progressView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-Cn-v4t">
-                                <rect key="frame" x="177.5" y="290.5" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr5-mF-WOb">
+                                <rect key="frame" x="99" y="322.5" width="176" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="x0K-bw-dpY" firstAttribute="top" secondItem="keQ-Cn-v4t" secondAttribute="bottom" constant="32" id="CAl-bN-H6T"/>
-                            <constraint firstItem="x0K-bw-dpY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="O5t-4E-scz"/>
-                            <constraint firstItem="x0K-bw-dpY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bF7-B4-ISW"/>
-                            <constraint firstItem="keQ-Cn-v4t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hJm-Wq-CCT"/>
-                            <constraint firstItem="x0K-bw-dpY" firstAttribute="top" secondItem="keQ-Cn-v4t" secondAttribute="bottom" constant="32" id="oac-Hw-IjZ"/>
+                            <constraint firstItem="hr5-mF-WOb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dNG-py-spB"/>
+                            <constraint firstItem="hr5-mF-WOb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vcx-Jn-FX7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
